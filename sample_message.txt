@@ -1,0 +1,39 @@
+Spam 1: Congratulations! You've won a free iPhone. Click here to claim.
+
+Spam 2: You have been selected for a $1000 Walmart gift card. Act now!
+
+Spam 3: Urgent! Your account has been compromised. Verify immediately.
+
+Spam 4: Win a brand new car by entering our lucky draw today!
+
+Spam 5: Get rich quick! Earn $5000 a week from home. Sign up now.
+
+Spam 6: Limited time offer! Buy one get one free on all items.
+
+Spam 7: Your loan is approved. Click to receive your funds instantly.
+
+Spam 8: You’ve been chosen for a free vacation to the Bahamas!
+
+Spam 9: Act now! Clearance sale ends tonight. Huge discounts!
+
+Spam 10: This is not a scam! Claim your inheritance of $2 million now.
+
+Not Spam 1: Hi John, are we still meeting at 3 PM today?
+
+Not Spam 2: Don’t forget to bring your umbrella, it might rain later.
+
+Not Spam 3: Can you send me the report by end of day?
+
+Not Spam 4: Happy birthday! Hope you have a wonderful day.
+
+Not Spam 5: Let’s catch up over coffee this weekend.
+
+Not Spam 6: The meeting has been rescheduled to next Monday.
+
+Not Spam 7: Please review the attached document before our call.
+
+Not Spam 8: Great job on the presentation yesterday!
+
+Not Spam 9: I’ll be working from home tomorrow.
+
+Not Spam 10: Let me know if you need help with the project.
