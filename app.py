@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
-import string
 import nltk
+from nltk.tokenize import wordpunct_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
@@ -12,7 +12,6 @@ ps = PorterStemmer()
 
 @st.cache_resource
 def load_nltk_data():
-    nltk.download('punkt')
     nltk.download('stopwords')
 
 load_nltk_data()
@@ -24,16 +23,13 @@ STOP_WORDS = set(stopwords.words('english'))
 # --------------------
 def transform_text(text):
     text = text.lower()
-    tokens = nltk.word_tokenize(text)
+    tokens = wordpunct_tokenize(text)
 
     # Keep alphanumeric tokens
     tokens = [word for word in tokens if word.isalnum()]
 
-    # Remove stopwords and punctuation
-    tokens = [
-        word for word in tokens
-        if word not in STOP_WORDS and word not in string.punctuation
-    ]
+    # Remove stopwords
+    tokens = [word for word in tokens if word not in STOP_WORDS]
 
     # Stemming
     tokens = [ps.stem(word) for word in tokens]
@@ -63,17 +59,11 @@ if st.button("Predict"):
         st.warning("⚠️ Please enter a message first.")
     else:
         with st.spinner("Analyzing message..."):
-            # Preprocess
             transformed_sms = transform_text(input_sms)
-
-            # Vectorize
             vector_input = tfidf.transform([transformed_sms])
-
-            # Predict
             result = model.predict(vector_input)[0]
 
-        # Display result
         if result == 1:
-            st.error("🚨 IT'S A SPAM MESSAGE ")
+            st.error("🚨 IT'S A SPAM MESSAGE")
         else:
             st.success("✅ IT'S A HAM MESSAGE")
