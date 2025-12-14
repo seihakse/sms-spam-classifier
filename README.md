@@ -1,7 +1,4 @@
-# email-spam-classifier-new
-End to end code for the email spam classifier project
-
-# SMS / Email Spam Classifier
+# SMS / Email Spam Classifier - End to end code for the email spam classifier project
 
 ## 1. Project Overview
 
